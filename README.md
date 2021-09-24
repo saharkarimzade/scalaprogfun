@@ -1,5 +1,5 @@
 First you should have sbt and jvm 11
-(You should do nestler setting in Environment variable).
+(You should change setting in Environment variable).
 Also, You can download and run "coursier"
 
 
