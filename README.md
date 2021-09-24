@@ -15,7 +15,7 @@ For more information on the sbt-dotty plugin, see the
 [scala3-example-project](https://github.com/scala/scala3-example-project/blob/main/README.md).
 
 
-###Why do I change the structure?
+### Why do I change the structure?
 I Created the project with sbt(Open Intellij=>select scala=>select sbt)
 I Started working on scala in a ScalaWorkSheet as u see before... But It can't provide the Debugging situation and I see some strange bugs...It was not easy to creat classes in it... 
 I Decided to change the structure...I had 2 choices:
