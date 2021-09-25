@@ -13,14 +13,14 @@ class SampleClass(name: String, familyName: String, age: Int, height: Double) {
    *
    * @param sample
    */
-  def display(sample: SampleClass): Unit = {
-    println(s"sample.name $sample.age $sample.familyName")
+  def display(): Unit = {
+    println(s"$name $age $familyName")
     //In previous line we used STRING INTERPOLATOR(s-f-$)
     //something like that:
-    println(f"$sample.age")
+    println(f"$age")
     println(s"$${1+1}") //prints ${1+1}
     println(s"${1 + 1}") //prints {2}
-    println(f" $sample.height")
+    println(f" $height")
     //this two lines are the same:
     println(f" ${this.height}%2.2f ")
     println(f" $height%2.2f ")
@@ -37,10 +37,20 @@ class SampleClass(name: String, familyName: String, age: Int, height: Double) {
  * in scala there is not any keyword static like java! we should use its usage just by createing CompanionObject! every method and value of it  is usable without getting new
  */
 object SampleClass {
-  //  this line gets bug because we are not  get initial value to that variable we never could get it value!
+  //  this line gets bug because we are not  get initial value to that variable  anf after that we never could get it value!
   //  val numberOfChids:Int
+  //If we define a value
   val numberOfChids: Int = 0
+  //Static Cunstructor:(be awarw it is from THE Class NOT COMPANION OBJECT)
+  def objectSampleStatuivConstructor(age: Int) = new SampleClass("sahar","karimzadeh", age, 169)
   val f: Int => Int = (x: Int) => (x + 1)
+  val objectOfClass = new SampleClass("sahar","karimzadeh", 12, 169)
+
+  def printsth() = {
+    println("hi I am a func os comparison object")
+  }
+
+  def printOneOfVariables()=println(numberOfChids)
 
 
 }
