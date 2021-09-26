@@ -9,7 +9,7 @@ $ git reset --hard origin/main
 in previous case if you have changes use this command
 $ git reset --soft origin/main
 
-
+The name of branch should be  lower kebab case: e.g: set-the-change-of-controller
 steps for branch:
 git branch=> it lists the branches you have! master id default branch!
 git branch [yourBranchName that you want to create! Note this part of command is not string]=>create branch by this name theta is the copy of ????
@@ -41,14 +41,14 @@ note If the branch has created by anotherOne, and you checked out is, it means t
 how to delete branch?
 switch to that branch and try this:
 git branch -d [branchname]
-
-I don't know it deletes the servers branches or not?
+Do u know it deletes the servers branches or not? the answer is No! if you set D replace of d you can do it!:)
 while you commit : you save that changes on your local system! then when your system get destroyed your commite files may loos!
 while you push: you save the data on the git server(network)! then this is the safest place for your data!
 before every push get pull(I should spend time for the type of pull: repase pull or general pull?!)
 you may see so much conflicts in push and merge time... you should resolve it  and commit and push time;)
 
 what is rebase pull?
+
 
 
 How the companies limit the developers on some git branches like master? they change seeting that they are on gitLab and GitHob and the applications of it
