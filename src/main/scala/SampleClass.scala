@@ -1,4 +1,10 @@
-class SampleClass(name: String, familyName: String, age: Int, height: Double) {
+//lets use some sme Syntatic sugar!
+package com.sampleCode
+package mainCode
+//previous lines
+
+
+class SampleClass(name: String, familyName: String, age: Int, height: Double)  {
   //the class variable are val(I can say mutable in replace) by default uless you mention,
   // aproximately we can say everything in scala is or should
   // be immutabe unless there is a strong reason for it! It cause you see less bugs in RUNTIME!
@@ -13,6 +19,7 @@ class SampleClass(name: String, familyName: String, age: Int, height: Double) {
    *
    * @param sample
    */
+  
   def display(): Unit = {
     println(s"$name $age $familyName")
     //In previous line we used STRING INTERPOLATOR(s-f-$)
