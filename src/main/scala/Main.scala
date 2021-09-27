@@ -1,4 +1,4 @@
-//lets use some sme Syntatic sugar!
+//lets use some Syntatic sugar!
 package com.sampleCode
 package mainCode
 //previous lines set a nameSpace: the virtual space that
@@ -8,9 +8,10 @@ package mainCode
 //+protected:The members of class are visible to that class and classes extend this class!
 // There are someExamples in myPackage!
 //+private:It means that part is visible only by that class and its objects!
-//NOte the term of protected in Scala differs the java Term! if you want to introduse that
+//Note the term of "protected" in Scala differs the java Term! if you want to introduse that
 // consept in scala(visible in that package)
-//you can use private[packageName] it means that member is visible juust to that package!
+//you can use private[packageName] =>it means that member is visible juust to that package!
+// this consept is more usable than JAVA consept of Protected!
 
 @main def hello: Unit =
   //  We are not forced to set curly brucets, indentation can set the blocks!
@@ -23,11 +24,36 @@ package mainCode
   SampleClass.printsth()
   SampleClass.objectOfClass.display()
   var let = 1
-  //  compiler gets wrong from the next line,Java syntaxes is more different to Scala az we thaught
+  //  compiler gets wrong from the next line,Java syntaxes is more different to Scala as we thaught
   //  let++
-  //but nex line is ok!
+  //but next line is ok!
   let += 1
   let = let + 1
+  println("-" * 100)//It prints - for 100 times!:)
+  //Some example of blocks!We can use blocks for every variablke and funck and methods... but what retuns is the last line!
+//  we have return in scala too, but we dont need it!
+  var variable={
+    //"\n" example
+    //it will print "Happy learning!"" in a new line
+    println("Hello world\nHappy learning!")
+    //"\t" example
+    //it will print "Happy learning!"" after a tab space
+    println("Hello world\tHappy learning!")
+    4567
+  }
+  println("variable="+variable)
+  variable=
+    var num1 = 324.141414
+    printf("Roll Number"+ num1)
+
+    print("------Roll Number = " + num1)
+    1234
+
+  //As you see we use INTENDATION instead of curly brackets!:)
+  println(s"---- variable=$variable");
+   //semicolonm is optional, Wher u put some command in a same line you should use it
 
 
 def msg = "I was compiled by Scala 3. :)"
+//As u see we are not forces to set () in front of method name,
+// but if we use it, we should use it everywhere we call this method.

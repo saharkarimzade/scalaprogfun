@@ -40,7 +40,7 @@ class SampleClass(name: String, familyName: String, age: Int, height: Double)  {
 
 /**
  * companionObject=>ALT+Enter on the name of class and select AddCompanionObject
- * The name of cmpanion object is same as its class(can we have an object whit different name?yes! but it is not companion!I dont know usage of it yet) you can call its method whenever you want(sth like static methods in java)-when you creat companion object the colour of the circle of class of intellij gets 2 colour(blue-brown) from one colour(blue)!
+ * The name of companion object is same as its class(can we have an object whit different name?yes! but it is not companion!I dont know usage of it yet) you can call its method whenever you want(sth like static methods in java)-when you creat companion object the colour of the circle of class of intellij gets 2 colour(blue-brown) from one colour(blue)!
  * in scala there is not any keyword static like java! we should use its usage just by createing CompanionObject! every method and value of it  is usable without getting new
  */
 object SampleClass {
