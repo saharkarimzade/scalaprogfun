@@ -72,3 +72,9 @@ git switch(in the newest version of git this command uses=>I should try it)
 How we can get branch of some previous versions?
 
 If there was an unsolvable problem and the only way be getting back to a version of past how we can solve it and get back?
+  
+  
+  a useful resource:
+  
+  
+  https://education.github.com/git-cheat-sheet-education.pdf
