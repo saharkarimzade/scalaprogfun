@@ -76,5 +76,5 @@ If there was an unsolvable problem and the only way be getting back to a version
   
   a useful resource:
   
-  
+  NEVER EVER YOU SHOULDNT CHANGE OR COMMIT >GIT FILE BECAUSE IT HAS STH ABOUT THAT PROJECT AT THAT TIM! IT SHOULDNT BE COMITTED NEVERRRRRRRRR!
   https://education.github.com/git-cheat-sheet-education.pdf
