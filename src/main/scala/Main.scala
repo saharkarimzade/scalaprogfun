@@ -1,6 +1,9 @@
 //lets use some Syntatic sugar!
 package com.sampleCode
 package mainCode
+
+import scala.util.{Failure, Success}
+import scala.util.Try
 //previous lines set a nameSpace: the virtual space that
 // u can Creat just by some commands!But it can limit your access!
 // Access Modifiers can help!3types of modifier in scala:
@@ -48,12 +51,59 @@ package mainCode
 
     print("------Roll Number = " + num1)
     1234
-
   //As you see we use INTENDATION instead of curly brackets!:)
   println(s"---- variable=$variable");
    //semicolonm is optional, Wher u put some command in a same line you should use it
-
+  println("---- variable");
 
 def msg = "I was compiled by Scala 3. :)"
 //As u see we are not forces to set () in front of method name,
 // but if we use it, we should use it everywhere we call this method.
+//The most famous types of exceptions: Try Catch, Finally, Throws Keyword & Custom Exception
+case class DivideByZero() extends Exception{
+  //Custom Exceptions
+  def divide(dividend: Int, divisor: Int): Int = {
+    if (divisor == 0) {
+      throw new DivideByZero
+    }
+
+    dividend / divisor
+  }
+
+
+//try/catch/finally
+  def divideByZero(a: Int): Any = {
+    try {
+      divide(a, 0)
+    } catch {
+      case e: DivideByZero => null
+    }
+  }
+
+
+//Try/Success/Failure
+  def divideWithTry(dividend: Int, divisor: Int): Try[Int] = Try(divide(dividend, divisor))
+  assert(divideWithTry(10, 0) == Failure(new DivideByZero))
+  val result = divideWithTry(10, 0) match {
+    case Success(i) => i
+    case Failure(DivideByZero()) => None
+  }
+
+//Option/Some/None
+  def divideWithOption(dividend: Int, divisor: Int): Option[Int] = {
+    if (divisor == 0) {
+      None
+    } else {
+      Some(dividend / divisor)
+    }
+  }
+//Either/Left/Right
+  def divideWithEither(dividend: Int, divisor: Int): Either[String, Int] = {
+    if (divisor == 0) {
+      Left("Can't divide by zero")
+    } else {
+      Right(dividend / divisor)
+    }
+  }
+
+}
