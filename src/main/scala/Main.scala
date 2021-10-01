@@ -60,6 +60,9 @@ def msg = "I was compiled by Scala 3. :)"
 //As u see we are not forces to set () in front of method name,
 // but if we use it, we should use it everywhere we call this method.
 //The most famous types of exceptions: Try Catch, Finally, Throws Keyword & Custom Exception
+//nn
+
+//in java you cant creat two independent class and every file have ne class that can have some nested class
 case class DivideByZero() extends Exception{
   //Custom Exceptions
   def divide(dividend: Int, divisor: Int): Int = {
