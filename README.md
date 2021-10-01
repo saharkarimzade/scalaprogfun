@@ -29,3 +29,6 @@ it is like cloning a git repository
 (if in that command u remove 3 you can have a simple project of scala 2)
 
 then I replaced everything in myProject except bsp(it is depended on compiler) and build.sbt(it is something like pom file of maven) and gitignore
+
+
+for supporting Scala3 your **version of intellij** should be _2020.1_ 0r _higher_!

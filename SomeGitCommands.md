@@ -76,5 +76,29 @@ If there was an unsolvable problem and the only way be getting back to a version
   
   a useful resource:
   
-  NEVER EVER YOU SHOULDNT CHANGE OR COMMIT >GIT FILE BECAUSE IT HAS STH ABOUT THAT PROJECT AT THAT TIM! IT SHOULDNT BE COMITTED NEVERRRRRRRRR!
+  NEVER EVER YOU SHOULDNT CHANGE **.GIT** FILE BECAUSE IT HAS STH ABOUT THAT PROJECT AT THAT TIM! IT SHOULDNT BE changed NEVERRRRRRRRR! 
+
+for this reason you never can't commit .git! IF YOU CHANGE .GIT file
+then COMMIT STH EVERYTHING CAN BE COMPLICATED AND DESTROYED!
+
+
+If you want to get clone from a specific version in intellij fist
+commit (and push?) every change you can go to git page at the bottom of intellij and see 
+the flow of versions  and right-click on that specific version and then select "Reset current branch to here"
+if you have some wrong commit that didn't push, run this command to cancel them:
+
+**git reset --hard origin/<nameOfcurrentBranch>**
+
+(maybe u can use sof/keep/mixed instead of hard...READ! )
+
+(there are some useful text about this commands prefer to read that:
+$ git reset --hard HEAD       (going back to HEAD)
+
+$ git reset --hard HEAD^      (going back to the commit before HEAD)
+$ git reset --hard HEAD~1     (equivalent to "^")
+
+$ git reset --hard HEAD~2     (going back two commits before HEAD)
+)
+
+
   https://education.github.com/git-cheat-sheet-education.pdf
