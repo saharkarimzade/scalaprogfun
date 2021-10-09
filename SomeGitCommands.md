@@ -76,7 +76,7 @@ If there was an unsolvable problem and the only way be getting back to a version
   
   a useful resource:
   
-  NEVER EVER YOU SHOULDNT CHANGE **.GIT** FILE BECAUSE IT HAS STH ABOUT THAT PROJECT AT THAT TIM! IT SHOULDNT BE changed NEVERRRRRRRRR! 
+  NEVER EVER YOU SHOULDNT CHANGE **.GIT** FILE BECAUSE IT HAS STH ABOUT THAT PROJECT AT THAT TIME! IT SHOULDNT BE changed NEVERRRRRRRRR! 
 
 for this reason you never can't commit .git! IF YOU CHANGE .GIT file
 then COMMIT STH EVERYTHING CAN BE COMPLICATED AND DESTROYED!
@@ -89,7 +89,7 @@ if you have some wrong commit that didn't push, run this command to cancel them:
 
 **git reset --hard origin/<nameOfcurrentBranch>**
 
-(maybe u can use sof/keep/mixed instead of hard...READ! )
+(maybe u can use soft/keep/mixed instead of hard...READ! )
 
 (there are some useful text about this commands prefer to read that:
 $ git reset --hard HEAD       (going back to HEAD)
