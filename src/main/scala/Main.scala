@@ -1,7 +1,6 @@
 //lets use some Syntatic sugar!
 package com.sampleCode
 package mainCode
-
 import scala.util.{Failure, Success, Try}
 //previous lines set a nameSpace: the virtual space that
 // u can Creat just by some commands!But it can limit your access!
@@ -18,7 +17,8 @@ import scala.util.{Failure, Success, Try}
 @main def hello: Unit =
   //  We are not forced to set curly brucets, indentation can set the blocks!
   println("Hello world!")
-
+  val aaaa=new PattrnMatchingSample
+  aaaa.patternMatcher(1)
 
   //  println(msg)
   var b = new SampleClass(name = "Alexa", familyName = "Amazon", age = 11, height = 123.2)
