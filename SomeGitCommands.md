@@ -12,7 +12,7 @@ $ git reset --soft origin/main
 The name of branch should be  lower kebab case: e.g: set-the-change-of-controller
 steps for branch:
 git branch=> it lists the branches you have! master id default branch!
-git branch [yourBranchName that you want to create! Note this part of command is not string]=>create branch by this name theta is the copy of ????
+git branch [yourBranchName that you want to create! Note this part of command is not string]=>create branch by this name that is the copy of ????
 git checkout [the name of branch you want to switch your code]
 after that every add and commit and push will be on that master,In the other world This Is Your Active Branch!You are able to see the name of that active branch at the end of your line of git!:)
 git log=>you can see the log of ??? last commands on your system
