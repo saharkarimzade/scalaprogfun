@@ -1,0 +1,5 @@
+package newseasonoflife
+
+class Happiness {
+
+}
