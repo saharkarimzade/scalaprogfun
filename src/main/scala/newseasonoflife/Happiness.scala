@@ -43,10 +43,15 @@ object Happiness {
     println('s')
     println('\n')
     println('\u2500')
-    println("hello" + " " + "world")
+    println("                      well hello".stripMargin(' ') + " " + "world")
+
+    //what is usage of tuple cottation? it allow printin some spesific characters in everyline like"\" we cant print *BACKSLASH* in a line in normal way
+//    println("\") compiler get wrong hear
+    println("""\""")
+
     println(
-      """hello
-        |world""".stripMargin)
+      """                               hello
+        ||||rrrrrrrrworld""".stripMargin('|'))//it remove the characters in everykine until first  time of the character
 
     println(
       """#hello

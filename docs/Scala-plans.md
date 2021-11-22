@@ -1,11 +1,11 @@
 #scala plans document in markdown file
 ## scala subjects to read
-- [ ] difference between mutable and immutable
-- [ ] `val` and `var` and see the difference
-- [ ] how to define function with input and output(with `def`)
-- [ ] how to define function with input and output(with `val`) and see how you could define an anonymous function(Lambda)
-- [ ] match case and its guards
-- [ ] partial function
+1- [ ] difference between mutable and immutable
+2- [ ] `val` and `var` and see the difference
+3- [ ] how to define function with input and output(with `def`)
+4- [ ] how to define function with input and output(with `val`) and see how you could define an anonymous function(Lambda)
+5- [ ] match case and its guards
+6- [ ] partial function
 - [ ] difference between back quotation and single quotation and double quotation
 - [ ] tuple
 - [ ] extract values from match case and tuple 
