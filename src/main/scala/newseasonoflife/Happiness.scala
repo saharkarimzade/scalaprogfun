@@ -69,7 +69,10 @@ object Happiness {
     println(
       """hel
         |lo""".stripPrefix)
-    println("_" * 50)
+    val x: String => String =  """hel
+               |lo""".stripPrefix
+    println(x("#"))
+    println("8" * 50)
     var danger: Null = null
     println(danger)
     val  sample: String = null
