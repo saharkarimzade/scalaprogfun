@@ -17,6 +17,8 @@ object Happiness {
 //sth about . and *
     println("_" * 50)
     //lazy val is mix of val and function it means this val  bind value just when it used
+    //Scala also supports lazy evaluation of val, also known as lazy val. It’s similar to a val, but its value is only
+    // computed when needed and it is defined using the lazy keyword.
     lazy val cons3 = {
       println("...")
       1339

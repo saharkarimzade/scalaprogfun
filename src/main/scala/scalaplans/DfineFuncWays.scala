@@ -15,3 +15,6 @@ val evenByVal: Int => Boolean = _ % 2 == 0
 //val means call-by-value
 
 }
+
+
+
