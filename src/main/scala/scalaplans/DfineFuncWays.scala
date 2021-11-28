@@ -27,7 +27,7 @@ val evenByVal: Int => Boolean = _ % 2 == 0
   ints.foreach(println(_))
   ints.foreach(println)
 
-  var userDir = () => { System.getProperty("user.dir") }
+  val userDir = () => { System.getProperty("user.dir") }
   println( userDir )
 
 

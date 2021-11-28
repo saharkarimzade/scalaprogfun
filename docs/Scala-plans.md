@@ -2,8 +2,8 @@
 ## scala subjects to read
 - [x] difference between mutable and immutable
 - [x] `val` and `var` and see the difference
-- [ ] how to define function with input and output(with `def`)
-- [ ] how to define function with input and output(with `val`) and see how you could define an anonymous function(Lambda)
+- [X] how to define function with input and output(with `def`)
+- [X] how to define function with input and output(with `val`) and see how you could define an anonymous function(Lambda)
 - [ ] match case and its guards
 - [ ] partial function
 - [ ] difference between back quotation and single quotation and double quotation
