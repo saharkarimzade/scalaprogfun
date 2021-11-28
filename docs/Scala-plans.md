@@ -4,12 +4,12 @@
 - [x] `val` and `var` and see the difference
 - [X] how to define function with input and output(with `def`)
 - [X] how to define function with input and output(with `val`) and see how you could define an anonymous function(Lambda)
-- [ ] match case and its guards
+- [X] match case and its guards
 - [ ] partial function
 - [ ] difference between back quotation and single quotation and double quotation
 - [ ] tuple
 - [ ] extract values from match case and tuple 
-- [ ] How to define and difference between `class`,`object`,`case class`,`trait`,`abstract class`
+- [ ] How to define and difference between `class`,`object`,`case class`,`trait`,`abstract class`,`sealed`
 - [ ] companion object for above structure(for example class or trait)
 - [ ] scala collection like `List`, `Seq`,`Map` and use their functions like `map`, `flatmap`, `flatten`, `max`, `min`, `head`, `headOption` ,`toSeq`,`toList`,`partition`,`groupBy`
 - [ ] Wrapper data structures like `Option`, `Either` and see their methods like `getOrElse` filter `exist`, `get`, `head`, `isEmpty`  

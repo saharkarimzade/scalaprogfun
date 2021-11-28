@@ -32,7 +32,31 @@ object MatchCaseSample  extends  App {
 
 //Matching on type only
   def findType(myType: Any): String = myType match {
-    case p: String => "String"
+    case p: String => "String"+p
     case c: Integer => "Integer"
   }
+
+  def findType3(myType: Any): String = myType match {
+    case oldsystemAge: String => "String"
+
+
+
+    case newSystemAage: Integer => "Integer"+newSystemAage
+  }
+//in every match case execute a partial function
+  def findType2(myType: Any): String = myType match {
+    case _: String => "String"
+    case _: Integer => "Integer"
+  }
+
+  //what is the diff between findtype1,2,3: nothing! it can just healp the readability of
+  // code! the edge of every case is totally differnt with the next case!
+  println( findType("4"))
+  println( findType2("4"))
+  println( findType3(4))
+
+
+  //TODO match case exhust
+
+
 }
