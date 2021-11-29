@@ -1,6 +1,7 @@
-MatchCase and some warning
+`MatchCase` and some `warning`s
 
-advantage of getting Error in compileTime instead of run time
+
+advantage of getting `Error` in compile time instead of run time
 
 Is getting Exceptions good?
 
