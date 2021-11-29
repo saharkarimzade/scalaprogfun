@@ -20,4 +20,4 @@
 - [ ] basic knowledge of Implicits like `ExecutionContext` and define a method with Implicit duration input
 - [ ] read about `build.sbt` and its structure
 - [ ] investigate how to define Generic variables and what is their usage
-
+- [ ] exceptions:Good or Bad?

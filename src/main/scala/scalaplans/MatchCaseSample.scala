@@ -47,16 +47,25 @@ object MatchCaseSample  extends  App {
   def findType2(myType: Any): String = myType match {
     case _: String => "String"
     case _: Integer => "Integer"
+
   }
 
   //what is the diff between findtype1,2,3: nothing! it can just healp the readability of
   // code! the edge of every case is totally differnt with the next case!
   println( findType("4"))
   println( findType2("4"))
-  println( findType3(4))
+  println( findType3(4.454345))
 
 
   //TODO match case exhust
 
+
+//  filterValues(s: SMS)
+//  val l = "1" :: "2" :: Nil
+//  l.sliding(2).foreach{case List(a,b) => }
+
+  //(Nil is an empty singleton object list that extends the List type,
+  // therefore, it has all fields and methods that any other List object has,
+  // and it’s usually used to initialize empty lists)
 
 }
