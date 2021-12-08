@@ -14,8 +14,8 @@ object CrashCourse extends App {
   def wannaEatIcecreamOrWatchMovie(icecream: Boolean, movie: Boolean): String = {
     if (icecream && movie)
       "Sooooo coool" else if (icecream || movie)
-      "still cool buddy"+
-      "   yeah!"
+      "still cool buddy" +
+        "   yeah!"
     else
       "boring"
       "I am not interested in!!!"
@@ -24,6 +24,34 @@ object CrashCourse extends App {
   println(wannaEatIcecreamOrWatchMovie(icecream = false, movie = true))
   //We could join two string with plus!
   println(wannaEatIcecreamOrWatchMovie(icecream = false, movie = false))
-//As you can see the result will be "I am not interested in!!!"(the last line)
 
+  //As you can see the result will be "I am not interested in!!!"(the last line)
+  def wannaEatIcecreamOrWatchMovieByScala3(icecream: Boolean, movie: Boolean): String =
+    if (icecream && movie)
+      "Sooooo coool" else if (icecream || movie)
+      "still cool buddy" +
+        "  scala3  yeah!"
+    else
+      "boring"
+      "I am not interested in!!!"
+      //next line is Optional
+    end if
+  //next line is Optional
+  end wannaEatIcecreamOrWatchMovieByScala3
+
+  println(wannaEatIcecreamOrWatchMovieByScala3(icecream = false, movie = true))
+  def wannaEatIcecreamOrWatchMovieBySomeCleanCode(icecream: Boolean, movie: Boolean): String =
+    val iceCreamEtedOrMovieWatchedMessage: String =
+      if (icecream && movie)
+        "Sooooo coool"
+      else if (icecream || movie)
+        "still cool buddy" +
+          "  scala3  yeah!"
+      else
+        "boring"
+        "I am not interested in!!!"
+      end if
+      //we could use parantises and end together
+    iceCreamEtedOrMovieWatchedMessage
+  end wannaEatIcecreamOrWatchMovieBySomeCleanCode
 }
