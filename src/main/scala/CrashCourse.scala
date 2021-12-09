@@ -1,4 +1,5 @@
-object CrashCourse extends App {
+object CrashCourse extends App :
+
   //Some scala practice based on  https://www.youtube.com/watch?v=-xRfJcwhy7A&list=PLJGDHERh23x9Y1Or4y4k2p04FEfSMWIVs
   val i = 4
   val result: Boolean = (i == 2)
@@ -66,12 +67,30 @@ object CrashCourse extends App {
   println(1377 >= 1337) //it prints true
   println(1377 <= 1337) //it prints true
   println(1377 < 1337) //it prints false
-  println("test" == "test")
+  println("test" == "test") //== and !== compare VALUES OF VARIABLE DESPITE OF JAVA! IN JSVS THEY USE FOR referense!
   println("test" == "test") //it prints true
   //in java it would be refrential equality,whitch means equality of references, In that case when you want to
   //compare values you should compare them  by equal
-  println("test" eq "test")
-  println("test" ne "test")
+  println("test" eq "test") //it just compare referenences
+  println("test" ne "test") //it just compare referenences
 
 
-}
+  //print("test"==1) => we can not code this because compiler don't let us(typeSafety):Values of types String and Int cannot be compared with == or !=
+  //print("test" eq 1) //=> we can not code this because compiler don't let us, becaue when type of two variable is different
+  //clearly their reference are different
+
+  /*There are additionally two flavors of type safety: static and dynamic. If you say that a "program"
+  is type safe, then you are commenting on static type safety. That is, the program will not have type
+   errors when it runs. You can also say that a "language" or "language implementation" is type safe, which
+    is a comment on dynamic type safety. Such a language or implementation will halt before attempting
+     any invalid operation I mean it checks in compile time.*/
+  /*Type safety is checking for matched data types during compile time. For example int a ="John" returns
+   error as variable 'a' is an integer and we are assigning a string value. These data type mismatches are
+  checked during compile time. https://stackoverflow.com/questions/3593632/what-is-typesafe-in-vb-net*/
+  //todo what is supertypesafe?
+  println(!true)
+  println(true || false)
+  println(true && false)
+
+
+end CrashCourse //=> use ":" in start and use "end+name" in end of section
