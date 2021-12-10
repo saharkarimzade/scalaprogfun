@@ -188,7 +188,8 @@ object MapDataTyoe extends App {
 
 
   println("_" * 51)
-  println(s"stdNumberList=$stdNumberList")
+  println(s"stdNumberList=$stdNumberList") //=> fun tip: for typing this code start by this 'println(s"stdNumberList=")' when u type '='
+  // then select your variable of classes(offers of IDE) by typing '$' then automatically 's' will replace before your code
   println(s"newTenYearsAddedStdNmbrList=$newTenYearsAddedStdNmbrList")
   println("_" * 51)
   println(s"scalaCourseDscp=$scalaCourseDscp")
@@ -214,12 +215,9 @@ object MapDataTyoe extends App {
   // not null it is some(respones)[It means something that is not null]
   //example:
   val OptionExample: Option[Int] = Some(2) //=>Note that first we mention type and next we call cunstructor, in type there is
-  val OptionExample2: Option[Int] = Some.apply(2) //=>Note that first we mention type and next we call cunstructor, in type there is
+  val OptionExample2: Option[Int] = Some.apply(2) //=>Note that first we mention type and next we call cunstructor, in type of option there is bracets
   val OptionExample3: Option[Int] = Option(2) //=>since Optione is case slass and in case clase cunstructor method is apply  this line and next line are equivalent
   val OptionExample4: Option[Int] = Option.apply(2)
-
-
-
 
   println("o" * 50)
   val map1 = Map((1, "hi"), (2, "hey"))
@@ -233,5 +231,78 @@ object MapDataTyoe extends App {
   //todo how to define cash by var and map for DB
   //todo What is none type and can we have no type for it?
   //todo to some discussion on what printed in consule
+}
+//in define of option method, in basic classes we have this: Option[+A] what is [+A]? A is generic type, therefore it is in bracets,
+//but what is plus meaning? - and + used for covariant and invariant, -A means: A and ?
+//+A:??
+//  Variance Annotation means defining “+” or “-” before Type Parameters(Generic types).
+//***list[+T]: Covariant	[+T]	If S is subtype of T, then List[S] is also subtype of List[T]
+//=====>should study by ehsan
+class Animal[+T](val x:T)//what is in parantises id optionl and it Force us to set (puupy) or (dog) in some lines of the object
+
+class Dog
+class Puppy extends Dog
+
+class AnimalCarer(val dog:Animal[Dog])
+
+object ScalaCovarianceTest{
+  def main(args: Array[String]) ={
+    val puppy = new Puppy
+    val dog = new Dog
+
+    val puppyAnimal:Animal[Puppy] = new Animal[Puppy](puppy)
+    val dogAnimal:Animal[Dog] = new Animal[Dog](dog)
+
+    val dogCarer = new AnimalCarer(dogAnimal)
+    val puppyCarer = new AnimalCarer(puppyAnimal)
+
+    println("Done.")
+  }
+}
+//****List[-T]: Contravariant	[-T]	If S is subtype of T, then List[T] is also subtype of List[S]
+
+//  example of Contravariant:
+abstract class Type [-T]{
+  def typeName : Unit
+}
+
+class SuperType extends Type[AnyVal]{
+  override def typeName: Unit = {
+    println("SuperType")
+  }
+}
+class SubType extends Type[Int]{
+  override def typeName: Unit = {
+    println("SubType")
+  }
+}
+
+class TypeCarer{
+  def display(t: Type[Int])={
+    t.typeName
+  }
+}
+
+object ScalaContravarianceTest {
+
+  def main(args: Array[String])  ={
+    val superType = new SuperType
+    val subType = new SubType
+
+    val typeCarer = new TypeCarer
+
+    typeCarer.display(subType)
+    typeCarer.display(superType)
+  }
+
+}
+//*****List[T]: Invariant-or non-variant	[T]	If S is subtype of T, then List[S] and List[T] are unrelated:In
+// Scala, by default Generic Types have Non-Variant relationship. If we define Parameterized Types without
+// using “+’ or “-” symbols, then they are known as Invariants.
+
+//defining trait amd method without implementation:
+
+trait A{
+  def exampleOfnoImpl(a:Int) = ???
 }
 
