@@ -226,10 +226,12 @@ object MapDataTyoe extends App {
 
 
   //todo what is Map and tuple and their methods:They are output of
-  //todo what is map and container
+  //todo what is map and container:
+  //containers have map and flatmap method
   //todo differ between hashmap in java and map
   //todo how to define cash by var and map for DB
   //todo What is none type and can we have no type for it?
+
   //todo to some discussion on what printed in consule
 }
 
