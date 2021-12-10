@@ -166,7 +166,8 @@ object MapDataTyoe extends App {
   //In previouse line first Option is type, second option is constructor
   val mathCourseDscrp: Option[String] = None
   val lendedBookByStdNumber: Map[Int, String] = Map(8798 -> "Harry Potter", 8989 -> "Lovely Bones", 8985 -> "Hock Elberyphin", 1245 -> "TomSayer", 1245 -> "Qhoran")
-
+  val notFoundStdNumberFor50: Option[String] = lendedBookByStdNumber.get(50) // Resutl: None
+  val foundStdNumberFor8798: Option[String] = lendedBookByStdNumber.get(8798) //Result: Some("Harry Potter")
   //transforming/translating data using map:
   val newTenYearsAddedStdNmbrList: List[Int] = stdNumberList.map(_ + 100) //it add 10 years to every stdNumber
   val newScalaCourseDscMohandesAdded: Option[String] = scalaCourseDscp.map(_ + " By mohandes E.BB")
@@ -208,7 +209,25 @@ object MapDataTyoe extends App {
   println(s"exTest=$exTest")
   println(s"exHi=$exHi")
   println(s"exHandred=$exHandred")
-  //todo some and none-what is Map and tuple and their methods
+  // some and none???
+  // option,when the response is nul, it is none when the response is
+  // not null it is some(respones)[It means something that is not null]
+  //example:
+  val OptionExample: Option[Int] = Some(2) //=>Note that first we mention type and next we call cunstructor, in type there is
+  val OptionExample2: Option[Int] = Some.apply(2) //=>Note that first we mention type and next we call cunstructor, in type there is
+  val OptionExample3: Option[Int] = Option(2) //=>since Optione is case slass and in case clase cunstructor method is apply  this line and next line are equivalent
+  val OptionExample4: Option[Int] = Option.apply(2)
+
+
+
+
+  println("o" * 50)
+  val map1 = Map((1, "hi"), (2, "hey"))
+  val newMap: Map[String, String] = map1.map(x => (x.toString(), "sahar"))
+  println(newMap)
+
+
+  //todo what is Map and tuple and their methods:They are output of
   //todo what is map and container
   //todo differ between hashmap in java and map
   //todo how to define cash by var and map for DB
