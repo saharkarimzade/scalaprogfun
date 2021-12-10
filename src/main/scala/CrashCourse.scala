@@ -232,26 +232,28 @@ object MapDataTyoe extends App {
   //todo What is none type and can we have no type for it?
   //todo to some discussion on what printed in consule
 }
+
 //in define of option method, in basic classes we have this: Option[+A] what is [+A]? A is generic type, therefore it is in bracets,
 //but what is plus meaning? - and + used for covariant and invariant, -A means: A and ?
 //+A:??
 //  Variance Annotation means defining “+” or “-” before Type Parameters(Generic types).
 //***list[+T]: Covariant	[+T]	If S is subtype of T, then List[S] is also subtype of List[T]
 //=====>should study by ehsan
-class Animal[+T](val x:T)//what is in parantises id optionl and it Force us to set (puupy) or (dog) in some lines of the object
+class Animal[+T](val x: T) //what is in parantises id optionl and it Force us to set (puupy) or (dog) in some lines of the object
 
 class Dog
+
 class Puppy extends Dog
 
-class AnimalCarer(val dog:Animal[Dog])
+class AnimalCarer(val dog: Animal[Dog])
 
-object ScalaCovarianceTest{
-  def main(args: Array[String]) ={
+object ScalaCovarianceTest {
+  def main(args: Array[String]) = {
     val puppy = new Puppy
     val dog = new Dog
 
-    val puppyAnimal:Animal[Puppy] = new Animal[Puppy](puppy)
-    val dogAnimal:Animal[Dog] = new Animal[Dog](dog)
+    val puppyAnimal: Animal[Puppy] = new Animal[Puppy](puppy)
+    val dogAnimal: Animal[Dog] = new Animal[Dog](dog)
 
     val dogCarer = new AnimalCarer(dogAnimal)
     val puppyCarer = new AnimalCarer(puppyAnimal)
@@ -262,30 +264,31 @@ object ScalaCovarianceTest{
 //****List[-T]: Contravariant	[-T]	If S is subtype of T, then List[T] is also subtype of List[S]
 
 //  example of Contravariant:
-abstract class Type [-T]{
-  def typeName : Unit
+abstract class Type[-T] {
+  def typeName: Unit
 }
 
-class SuperType extends Type[AnyVal]{
+class SuperType extends Type[AnyVal] {
   override def typeName: Unit = {
     println("SuperType")
   }
 }
-class SubType extends Type[Int]{
+
+class SubType extends Type[Int] {
   override def typeName: Unit = {
     println("SubType")
   }
 }
 
-class TypeCarer{
-  def display(t: Type[Int])={
+class TypeCarer {
+  def display(t: Type[Int]) = {
     t.typeName
   }
 }
 
 object ScalaContravarianceTest {
 
-  def main(args: Array[String])  ={
+  def main(args: Array[String]) = {
     val superType = new SuperType
     val subType = new SubType
 
@@ -300,9 +303,21 @@ object ScalaContravarianceTest {
 // Scala, by default Generic Types have Non-Variant relationship. If we define Parameterized Types without
 // using “+’ or “-” symbols, then they are known as Invariants.
 
-//defining trait amd method without implementation:
+//defining trait/abstractClass method without implementation:
+trait Animal2 {
+  def exampleOfnoImpl(a: Int) = ???
+  def exampleOfImpl2(a: Int) = {1
 
-trait A{
-  def exampleOfnoImpl(a:Int) = ???
+} //Scala trait don't allow cunstructor parameters:
+
+//this won't compile:
+//trait Animal(name:String){}
+//Althoght Advantage of trait to abstractClass id that trait can have multi inheritance!!!!!!!!!!!!!!!!!!!!!!
+//Both of them can have methods whithout impl or with impl, despite java they dont need any word(like default)
+//In scala trait and abstract class are more similar
+//both of them use by "extends" and both of them should use "override" for overriding methods, this method may have impl:)
+abstract class example(a: Int) {
+  def examplemethod1(c: Int) = {1}
+  def examplemethod2(c: Int) = ???
 }
 
