@@ -27,18 +27,16 @@ case class SampleCaseClass(a:Int,b:Int) {
       //tuple is a collection of elements
       //tuples can store different types of variables and they are immutable unlike array
       var name=(12,5,"dsdsdsd")
-      //we use tupleName._n access to that element
+      //we use tupleName._n access to that element that stats from 1
       println(s"$name._1")
-
       //pattern matching in tuples:
       var (a, b, c) = (15, "chandan", true)
       println(a)
       println(b)
       println(c)
-
       //Iterating over a tuple:
       name.productIterator.foreach{i=>println(i)}
-      //converting tuple tyo string
+      //converting tuple to string
       println(name.toString() )
     }
   }
