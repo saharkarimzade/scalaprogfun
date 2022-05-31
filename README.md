@@ -1,11 +1,10 @@
-First you should have sbt and jvm 11
+First you should insall sbt and jvm 11
 (You should change setting in Environment variable).
 Also, You can download and run "coursier"
 
 
-This project is based on scala 13 a
-and java 11
-## sbt project compiled with Scala 3
+This project is based on scala 3 and java 11
+
 
 ### Usage
 
