@@ -1,4 +1,4 @@
-First you should insall sbt and jvm 11
+First you should install sbt and jvm 11
 (You should change setting in Environment variable).
 Also, You can download and run "coursier"
 
